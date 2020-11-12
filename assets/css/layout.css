@@ -1,0 +1,366 @@
+
+/*********Header style ******************/
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--lightBlue);
+    border-bottom: 1px solid var(--red);
+    box-shadow: var(--mdShadow)
+}
+
+.header-wrapper {
+    max-width: var(centerColumn);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px;
+    margin: 0 auto;
+}
+
+
+.menu {
+    display: flex;
+    font-weight: 300;
+    text-transform: uppercase;
+    justify-content: space-between;
+    gap: var(--gap)
+}
+
+.contact-btn button {
+    background-color: white;
+    border: 1px solid var(--red);
+    color: var(--red);
+
+}
+
+.contact-btn:hover {
+    border-bottom:none;
+}
+
+.contact-btn button:hover {
+    background-color: var(--red);
+    color: var(--lightBlue);
+
+}
+
+@media only screen and (max-width: 600px){
+    .contact-btn {
+        margin-top: 1.5rem;
+        margin-left: auto;
+    }
+}
+
+/******* Hero section *******/
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    max-width:  var(--maxWidth);
+    margin: 20px auto;
+    padding: 8rem 1rem;
+    gap: var(--rowGap);
+}
+
+.hero-image {
+    width: 100%;
+}
+
+.hero-content > button {
+    margin-top: 1.5rem;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        max-width:  var(--maxWidth);
+        align-items: center;
+        margin: 0 8rem;
+    }
+}
+
+/******* Contact section *******/
+.contact-wrapper {
+    max-width: 40ch;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 0;
+    gap: var(--gap);
+}
+
+#contact form {
+    display: flex;
+    justify-content: space-between;
+}
+input[type='email'] {
+    line-height: 2;
+    border-radius: 0.25rem;
+    padding: 0.43rem;
+    margin-right: 1rem;
+    justify-self: stretch;
+    width: 250px;
+}
+
+#contact p:last-child {
+    font-size: var(--mdText);
+    color: #020100;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/******* project section *******/
+
+#projects {
+    max-width: var(--centerColumn);
+    margin: 0 auto;
+    padding: 6rem 0;
+}
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.projects-wrapper {
+    display: grid;
+    gap: 1rem;
+
+}
+
+.projects-wrapper article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    place-items: center;
+}
+
+.project-one, .project-two {
+    margin-bottom: 5rem;
+}
+
+.project-text h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+@media only screen and (max-width:800px ){
+    .projects-wrapper article {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        place-items: center;
+        margin: 0 2rem;
+    }
+}
+/******* companies section *******/
+
+.companies-wrapper {
+    max-width: var(--centerColumn);
+    margin: 0 auto;
+    padding: 6rem 0;
+}
+
+.companies-title {
+    text-align: center;
+}
+
+.company-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.company-logo {
+    width: 100px;
+    height: auto;
+}
+
+/******* testimonials section *******/
+#testimonials {
+   
+    margin: 0 auto;
+    padding: 6rem 0;
+}
+
+.testimonials-title {
+    text-align: center;
+}
+
+.testimonials-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    max-width: 40ch;
+    box-shadow: var(--mdShadow);
+    padding: var(--lgPadding);
+    border-radius: var(--br);
+    background: var(--lightBlue);
+}
+
+.testimonial p {
+    font-style: italic;
+}
+.customer {
+    margin-top: 2rem;
+    font-size: clamp(var(--mdText), 2vw, var(--lgText));
+}
+
+.customer img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: left;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.customer-text {
+    margin-top: 25px;
+}
+.customer-text p{   
+    font-size: var(--mdText);   
+}
+
+.customer-text h3 {
+    font-size: var(--xlText);
+}
+
+/******* pricing section *******/
+#pricing {
+    margin: 0 auto;
+    padding: 6rem 0;
+}
+
+.price-heading {
+    text-align: center;
+}
+
+.price-cards {
+    
+    display: flex;
+    margin: 3rem auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.price-card {
+    text-align: center;
+    display: flex; 
+    flex-direction: column;
+    padding: var(--xlPadding);
+    gap:2.5rem;
+    color: var(--lightBlue);
+    width: 18rem;
+}
+
+.price-card:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.price-card > h3 {
+    color: var(--lightBlue);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.price-card > p {
+    font-size: var(--lgText);
+}
+
+.price {
+    display: flex;
+   
+    justify-content: center;
+}
+
+.price > span:first-child {
+    position: relative;
+    top: 5px;
+}
+
+.price > span:nth-child(2) {
+    font-size: 5rem;
+    line-height: 1;
+    letter-spacing: -0.4rem;
+}
+
+.price > span:last-child {
+    align-self: end;
+    position: relative;
+    bottom: 5px;
+    left: 5px;
+}
+
+.personal {
+    background-color: var(--yellow);
+}
+
+.agency {
+    background-color: var(--red);
+}
+
+.enterprise {
+    background-color: var(--purple);
+}
+
+.red-btn {
+    background-color: var(--lightBlue);
+    color: var(--red);
+    border: none;
+    transition: var(--transition);
+}
+
+.red-btn:hover {
+    background-color: var( --text);
+    color: var( --lightBlue);
+    border: none;
+}
+
+@media only screen and (max-width: 950px) {
+    .price-cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .price-card:not(:last-child) {
+        margin-right: 0rem;
+        margin-bottom: 2rem;
+    }
+
+}
+
+/******* footer *******/
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.socials {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
